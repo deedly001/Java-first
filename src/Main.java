@@ -4,98 +4,133 @@ public class Main {
         // задача 1.
         System.out.println("задача 1.\n");
 
-        var dog = 8.0;
-        var cat = 3.6;
-        var paper = 763789;
-        System.out.println("Переменная dog имеет значение: " + dog);
-        System.out.println("Переменная cat имеет значение: " + cat);
-        System.out.println("Переменная paper имеет значение: " + paper);
-        System.out.println("______________________________________\n");
+        int firstNumber = 147;
+        byte secondNumber = 35;
+        short thirdNumber = 327;
+        long fourNumber = 337203647;
+        float fiveNumber = 8.6f;
+        double sixNumber = 0.5;
+
+        System.out.println("«Значение переменной firstNumber с типом int равно " + firstNumber + "».");
+        System.out.println("«Значение переменной secondNumber с типом byte равно " + secondNumber + "».");
+        System.out.println("«Значение переменной thirdNumber с типом short равно " + thirdNumber + "».");
+        System.out.println("«Значение переменной fourNumber с типом long равно " + fourNumber + "».");
+        System.out.println("«Значение переменной fiveNumber с типом float равно " + fiveNumber + "».");
+        System.out.println("«Значение переменной sixNumber с типом double равно " + sixNumber + "».\n");
+
 
         // задача 2.
         System.out.println("задача 2.\n");
 
-        dog += 4;
-        cat += 4;
-        paper += 4;
-        System.out.println("Переменная dog имеет значение: " + dog);
-        System.out.println("Переменная cat имеет значение: " + cat);
-        System.out.println("Переменная paper имеет значение: " + paper);
-        System.out.println("______________________________________\n");
+        double firstDouble = 27.12;
+        long nextLong = 987678965549L;
+        double secondDouble = 2.786;
+        int firstInt = 569;
+        int secondInt = 159;
+        short nextShort = 27897;
+        byte nextByte = 67;
+
+        System.out.println(firstDouble + "," + nextLong + "," + secondDouble + "," + firstInt + "," + secondInt + "," + nextShort + "," + nextByte + ".\n");
+
 
         // задача 3.
         System.out.println("задача 3.\n");
 
-        dog -= 3.5;
-        cat -= 1.6;
-        paper -= 7639;
-        System.out.println("Переменная dog имеет значение: " + dog);
-        System.out.println("Переменная cat имеет значение: " + cat);
-        System.out.println("Переменная paper имеет значение: " + paper);
-        System.out.println("______________________________________\n");
+        byte firstStudentsClass = 23;
+        byte secondStudentsClass = 27;
+        byte thirdStudentsClass = 30;
+        short purchasedTotal = 480;
+        int paperPerStudent = purchasedTotal / (firstStudentsClass + secondStudentsClass + thirdStudentsClass);
+
+        System.out.println("На каждого ученика рассчитано " + paperPerStudent + " листов бумаги.\n");
+
 
         // задача 4.
         System.out.println("задача 4.\n");
 
-        var friend = 19;
-        System.out.println("Переменная friend имеет значение: " + friend);
-        friend += 2;
-        System.out.println("Переменная friend имеет значение: " + friend);
-        friend /= 7;
-        System.out.println("Переменная friend имеет значение: " + friend);
-        System.out.println("______________________________________\n");
+        byte efficiencyPerMin = 16 / 2;
+        byte twentyMin = 20;
+        short dayHours = 60 * 24;
+        int threeDaysHours = dayHours * 3;
+        int monthHours = dayHours * 30;
+
+        System.out.println("За 20 мин машина произвела " + (twentyMin * efficiencyPerMin) + " штук бутылок.");
+        System.out.println("За сутки машина произвела " + (dayHours * efficiencyPerMin) + " штук бутылок.");
+        System.out.println("За 3 дня машина произвела " + (threeDaysHours * efficiencyPerMin) + " штук бутылок.");
+        System.out.println("За месяц машина произвела " + (monthHours * efficiencyPerMin) + " штук бутылок.\n");
 
         // задача 5.
-
         System.out.println("задача 5.\n");
 
-        var frog = 3.5;
-        System.out.println("Переменная frog имеет значение: " + frog);
-        frog *= 10;
-        System.out.println("Переменная frog имеет значение: " + frog);
-        frog /= 3.5;
-        System.out.println("Переменная frog имеет значение: " + frog);
-        frog += 4;
-        System.out.println("Переменная frog имеет значение: " + frog);
-        System.out.println("______________________________________\n");
+        byte paintPots = 120;
+        int totalClasses = paintPots / 6;
+        int whitePaint = totalClasses * 2;
+        int brownPaint = totalClasses * 4;
+
+        System.out.println("В школе, где " + totalClasses + "классов, нужно " + whitePaint + " банок белой краски и " + brownPaint + " банок коричневой краски.\n");
+
 
         // задача 6.
         System.out.println("задача 6.\n");
 
-        var firstBoxerWeight = 78.2;
-        var secondBoxerWeight = 82.7;
-        var weightBoxers = firstBoxerWeight + secondBoxerWeight;
-        /* в этой задаче я бы использовал if\else, но до них пока не дошли, можно использовать функцию
-        иначе выдает отрицательное значение*/
-        var differenceWeightBoxers = Math.abs(firstBoxerWeight - secondBoxerWeight);
-        // var differenceWeightBoxers = firstBoxer - secondBoxer;
-        System.out.println("Общая масса двух бойцов = " + weightBoxers + "кг");
-        System.out.println("Разницу между массами бойцов = " + differenceWeightBoxers + "кг");
-        System.out.println("______________________________________\n");
+        /*
+        Бананы — 5 штук (1 банан — 80 грамм).
+        Молоко — 200 мл (100 мл = 105 грамм).
+        Мороженое-пломбир — 2 брикета по 100 грамм.
+        Яйца сырые – 4 яйца (1 яйцо — 70 грамм).
+         */
+
+        byte bananaGrams = 80;
+        byte milkGrams = 105;
+        byte ice_creamGrams = 100;
+        byte eggGrams = 70;
+        char bananaCount = 5;
+        char milkCount = 2;
+        char ice_creamCount = 2;
+        char eggCount = 4;
+        int mixedBreakfast = (bananaGrams * bananaCount) + (milkGrams * milkCount) + (ice_creamGrams * ice_creamCount) + (eggGrams * eggCount);
+
+        System.out.println("Вес такого спорт-завтрака в граммах: " + mixedBreakfast + " грамм," + "вес в килограммах: " + mixedBreakfast / 1000f + " килограмма.\n");
+
 
         // задача 7.
-        System.out.println("задача 7.\n");
-        //есть ли смысл выводить две переменные если они есть в предыдущей задаче?
+        System.out.println("задача 7.\n"); // над названиями переменных можно сидеть часами...
 
-        var dividedWeight = firstBoxerWeight % secondBoxerWeight; // хотя можно сразу вывести в консоль
-        System.out.println("Остаток от деления между двумя весами = " + dividedWeight + "кг");
-        // сомневался с весом, но проверил через python и реально так получается.
-        System.out.println("______________________________________\n");
+        byte weightLose = 7;
+        int oneQuarter = (weightLose * 1000) / 250;
+        int oneHalf = (weightLose * 1000) / 500;
+        int averageWeightLoss = (oneQuarter + oneHalf) / 2;
+
+        System.out.println("Если спортсмен будет терять каждый день по 250 грамм потребуется " + oneQuarter + " дней.");
+        System.out.println("Если спортсмен будет терять каждый день по 500 грамм потребуется " + oneHalf + " дней.");
+        System.out.println("Потребуется дней в среднем, чтобы добиться результата похудения: " + averageWeightLoss + " дней.\n");
+
 
         // задача 8.
-        System.out.println("задача 8.1\n");
+        System.out.println("задача 8\n");
 
-        var workingHours = 640;
-        var hoursPerWorker = 8;
-        var workerCount = (workingHours / hoursPerWorker);
-        System.out.println("Всего работников в компании: " + workerCount + "\n");
+//      byte MariaSeniority = 3;
+//      byte DenisSeniority = 5;
+//      byte ChristinaSeniority = 8;
+        int mariaSalary = 67760;
+        int denisSalary = 83690;
+        int christinaSalary = 76230;
+        int mariaSalaryInc = mariaSalary / 10;
+        int denisSalaryInc = denisSalary / 10;
+        int christinaSalaryInc = christinaSalary / 10;
 
-        System.out.println("задача 8.2\n");
-        workerCount += 94;
-        workingHours = workerCount * 8;
-        System.out.println("Если в компании работает " + workerCount + " человек, то всего " + workingHours +
-                " часов работы может быть поделено между сотрудниками».");
+        System.out.println("Маша получала до повышения зарплаты: " + mariaSalary + " рублей.");
+        System.out.println("Маша теперь получает " + (mariaSalary + mariaSalaryInc) + " рублей. Годовой доход вырос на " + mariaSalaryInc + " рублей.");
+        System.out.println("Денис получал до повышения зарплаты: " + denisSalary + " рублей.");
+        System.out.println("Денис теперь получает " + (denisSalary + denisSalaryInc) + " рублей. Годовой доход вырос на " + denisSalaryInc + " рублей.");
+        System.out.println("Кристина получала до повышения зарплаты: " + christinaSalary + " рублей.");
+        System.out.println("Кристина теперь получает " + (christinaSalary + christinaSalaryInc) + " рублей. Годовой доход вырос на " + christinaSalaryInc + " рублей.");
+
     }
 
 }
+
+
+
+
 
