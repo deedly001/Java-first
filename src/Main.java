@@ -22,16 +22,21 @@ public class Main {
         // задача 2.
         System.out.println("задача 2.\n");
 
-        double firstDouble = 27.12;
-        long nextLong = 987678965549L;
-        double secondDouble = 2.786;
-        int firstInt = 569;
-        int secondInt = 159;
-        short nextShort = 27897;
-        byte nextByte = 67;
+        float numberA = 27.12f;
+        long numberB = 987678965549L;
+        float numberC = 2.786f;
+        short numberD = 569;
+        short numberE = -159;
+        short numberF = 27897;
+        byte numberg = 67;
 
-        System.out.println(firstDouble + "," + nextLong + "," + secondDouble + "," + firstInt + "," + secondInt + "," + nextShort + "," + nextByte + ".\n");
-
+        System.out.println(numberA);
+        System.out.println(numberB);
+        System.out.println(numberC);
+        System.out.println(numberD);
+        System.out.println(numberE);
+        System.out.println(numberF);
+        System.out.println(numberg);
 
         // задача 3.
         System.out.println("задача 3.\n");
@@ -109,15 +114,12 @@ public class Main {
         // задача 8.
         System.out.println("задача 8\n");
 
-//      byte MariaSeniority = 3;
-//      byte DenisSeniority = 5;
-//      byte ChristinaSeniority = 8;
         int mariaSalary = 67760;
         int denisSalary = 83690;
         int christinaSalary = 76230;
-        int mariaSalaryInc = mariaSalary / 10;
-        int denisSalaryInc = denisSalary / 10;
-        int christinaSalaryInc = christinaSalary / 10;
+        long mariaSalaryInc = (mariaSalary / 10);
+        long denisSalaryInc = denisSalary / 10;
+        long christinaSalaryInc = christinaSalary / 10;
 
         System.out.println("Маша получала до повышения зарплаты: " + mariaSalary + " рублей.");
         System.out.println("Маша теперь получает " + (mariaSalary + mariaSalaryInc) + " рублей. Годовой доход вырос на " + mariaSalaryInc + " рублей.");
