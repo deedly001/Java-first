@@ -1,132 +1,120 @@
-
 public class Main {
     public static void main(String[] args) {
         // задача 1.
-        System.out.println("задача 1.\n");
-
-        int firstNumber = 147;
-        byte secondNumber = 35;
-        short thirdNumber = 327;
-        long fourNumber = 337203647;
-        float fiveNumber = 8.6f;
-        double sixNumber = 0.5;
-
-        System.out.println("«Значение переменной firstNumber с типом int равно " + firstNumber + "».");
-        System.out.println("«Значение переменной secondNumber с типом byte равно " + secondNumber + "».");
-        System.out.println("«Значение переменной thirdNumber с типом short равно " + thirdNumber + "».");
-        System.out.println("«Значение переменной fourNumber с типом long равно " + fourNumber + "».");
-        System.out.println("«Значение переменной fiveNumber с типом float равно " + fiveNumber + "».");
-        System.out.println("«Значение переменной sixNumber с типом double равно " + sixNumber + "».\n");
-
-
+        firstTask(17);
         // задача 2.
-        System.out.println("задача 2.\n");
-
-        float numberA = 27.12f;
-        long numberB = 987678965549L;
-        float numberC = 2.786f;
-        short numberD = 569;
-        short numberE = -159;
-        short numberF = 27897;
-        byte numberg = 67;
-
-        System.out.println(numberA);
-        System.out.println(numberB);
-        System.out.println(numberC);
-        System.out.println(numberD);
-        System.out.println(numberE);
-        System.out.println(numberF);
-        System.out.println(numberg);
-
+        secondTask(+5);
         // задача 3.
-        System.out.println("задача 3.\n");
-
-        byte firstStudentsClass = 23;
-        byte secondStudentsClass = 27;
-        byte thirdStudentsClass = 30;
-        short purchasedTotal = 480;
-        int paperPerStudent = purchasedTotal / (firstStudentsClass + secondStudentsClass + thirdStudentsClass);
-
-        System.out.println("На каждого ученика рассчитано " + paperPerStudent + " листов бумаги.\n");
-
-
+        thirdTask(60);
         // задача 4.
-        System.out.println("задача 4.\n");
-
-        byte efficiencyPerMin = 16 / 2;
-        byte twentyMin = 20;
-        short dayHours = 60 * 24;
-        int threeDaysHours = dayHours * 3;
-        int monthHours = dayHours * 30;
-
-        System.out.println("За 20 мин машина произвела " + (twentyMin * efficiencyPerMin) + " штук бутылок.");
-        System.out.println("За сутки машина произвела " + (dayHours * efficiencyPerMin) + " штук бутылок.");
-        System.out.println("За 3 дня машина произвела " + (threeDaysHours * efficiencyPerMin) + " штук бутылок.");
-        System.out.println("За месяц машина произвела " + (monthHours * efficiencyPerMin) + " штук бутылок.\n");
-
+        fourthTask(5);
         // задача 5.
-        System.out.println("задача 5.\n");
-
-        byte paintPots = 120;
-        int totalClasses = paintPots / 6;
-        int whitePaint = totalClasses * 2;
-        int brownPaint = totalClasses * 4;
-
-        System.out.println("В школе, где " + totalClasses + "классов, нужно " + whitePaint + " банок белой краски и " + brownPaint + " банок коричневой краски.\n");
-
-
+        fifthTask(14);
         // задача 6.
-        System.out.println("задача 6.\n");
-
-        /*
-        Бананы — 5 штук (1 банан — 80 грамм).
-        Молоко — 200 мл (100 мл = 105 грамм).
-        Мороженое-пломбир — 2 брикета по 100 грамм.
-        Яйца сырые – 4 яйца (1 яйцо — 70 грамм).
-         */
-
-        byte bananaGrams = 80;
-        byte milkGrams = 105;
-        byte ice_creamGrams = 100;
-        byte eggGrams = 70;
-        char bananaCount = 5;
-        char milkCount = 2;
-        char ice_creamCount = 2;
-        char eggCount = 4;
-        int mixedBreakfast = (bananaGrams * bananaCount) + (milkGrams * milkCount) + (ice_creamGrams * ice_creamCount) + (eggGrams * eggCount);
-
-        System.out.println("Вес такого спорт-завтрака в граммах: " + mixedBreakfast + " грамм," + "вес в килограммах: " + mixedBreakfast / 1000f + " килограмма.\n");
-
-
+        sixthTask(62);
         // задача 7.
-        System.out.println("задача 7.\n"); // над названиями переменных можно сидеть часами...
-
-        byte weightLose = 7;
-        int oneQuarter = (weightLose * 1000) / 250;
-        int oneHalf = (weightLose * 1000) / 500;
-        int averageWeightLoss = (oneQuarter + oneHalf) / 2;
-
-        System.out.println("Если спортсмен будет терять каждый день по 250 грамм потребуется " + oneQuarter + " дней.");
-        System.out.println("Если спортсмен будет терять каждый день по 500 грамм потребуется " + oneHalf + " дней.");
-        System.out.println("Потребуется дней в среднем, чтобы добиться результата похудения: " + averageWeightLoss + " дней.\n");
-
-
+        seventhTask();
         // задача 8.
-        System.out.println("задача 8\n");
 
-        int mariaSalary = 67760;
-        int denisSalary = 83690;
-        int christinaSalary = 76230;
-        long mariaSalaryInc = (mariaSalary / 10);
-        long denisSalaryInc = denisSalary / 10;
-        long christinaSalaryInc = christinaSalary / 10;
+    }
 
-        System.out.println("Маша получала до повышения зарплаты: " + mariaSalary + " рублей.");
-        System.out.println("Маша теперь получает " + (mariaSalary + mariaSalaryInc) + " рублей. Годовой доход вырос на " + mariaSalaryInc + " рублей.");
-        System.out.println("Денис получал до повышения зарплаты: " + denisSalary + " рублей.");
-        System.out.println("Денис теперь получает " + (denisSalary + denisSalaryInc) + " рублей. Годовой доход вырос на " + denisSalaryInc + " рублей.");
-        System.out.println("Кристина получала до повышения зарплаты: " + christinaSalary + " рублей.");
-        System.out.println("Кристина теперь получает " + (christinaSalary + christinaSalaryInc) + " рублей. Годовой доход вырос на " + christinaSalaryInc + " рублей.");
+    static void firstTask(int userAge) {
+        System.out.println("Задача 1 \n");
+        if (userAge >= 18) {
+            System.out.println("Пользователю " + userAge + " лет, совершеннолетний");
+        } else {
+            System.out.println("Пользователю " + userAge + " лет, возраст совершеннолетия еще не наступил, нужно немного подождать");
+        }
+
+//        String minorUser = "Пользователю " + userAge + " лет, совершеннолетний";
+//        String adultUser = "Пользователю " + userAge + " лет, возраст совершеннолетия еще не наступил, нужно немного подождать";
+//        String result  = (userAge >= 18) ? minorUser : adultUser;
+//        System.out.println(result);
+
+//        String result = (userAge >= 18) ? "Пользователю " + userAge + " лет, совершеннолетний" : "Пользователю " + userAge + " лет, возраст совершеннолетия еще не наступил, нужно немного подождать";
+//        System.out.println(result);
+    }
+
+    static void secondTask(int streetTemp) {
+        System.out.println("\nЗадача 2 \n");
+        if (streetTemp >= 5) {
+            System.out.println("За окном +" + streetTemp + "°C , сегодня тепло, можно идти без шапки");
+        } else if (streetTemp <= -5) {
+            System.out.println("За окном " + streetTemp + "°C , на улице холодно, нужно надеть шапку");
+        } else {
+            System.out.println("За окном немного прохладно"); // отсебятина, а то вывод неполноценным кажется
+        }
+    }
+
+    static void thirdTask(int userSpeed) {
+        System.out.println("\nЗадача 3 \n");
+        if (userSpeed > 60) {
+            System.out.println("Ваша скорость " + userSpeed + " км/ч, придется заплатить штраф");
+        } else {
+            System.out.println("Ваша скорость " + userSpeed + " км/ч, можно ездить спокойно");
+        }
+//        String result = (userSpeed > 60) ? "Ваша скорость "+ userSpeed +" км/ч, придется заплатить штраф" : "Ваша скорость "+ userSpeed +" км/ч, можно ездить спокойно";
+//        System.out.println(result);
+    }
+
+    static void fourthTask(int userAge) {
+        System.out.println("\nЗадача 4 \n");
+        if (userAge >= 2 && userAge <= 6) {
+            System.out.println("Если возраст человека равен " + userAge + " лет, то ему нужно ходить в детский сад");
+        } else if (userAge >= 7 && userAge <= 17) {
+            System.out.println("Если возраст человека равен " + userAge + " лет, то ему нужно ходить в школу");
+        } else if (userAge >= 18 && userAge <= 24) {
+            System.out.println("Если возраст человека равен " + userAge + " лет, то ему нужно ходить в университет");
+        } else if (userAge > 24) {
+            System.out.println("Если возраст человека равен " + userAge + " лет, то ему нужно ходить в университет");
+        }
+    }
+
+
+    static void fifthTask(int userAge) {
+        System.out.println("\nЗадача 5 \n");
+        if (userAge < 5) {
+            System.out.println("Если ребенку " + userAge + " лет, он не может кататься на аттракционе");
+        } else if (userAge < 14) { // (userAge >= 5 && userAge < 14) IDE говорит что бессмысленно писать так, тк оно и так проходит
+            System.out.println("Если ребенку " + userAge + " лет, он может кататься только в сопровождении взрослого. Если взрослого нет, то кататься нельзя.");
+        } else {//else if (userAge >= 14) тоже самое с IDE
+            System.out.println("Если ребенку " + userAge + " лет, он может кататься без сопровождения взрослого.");
+        }
+    }
+
+    static void sixthTask(int totalPassengers) {
+        // по этой задаче как я понял: вместимость вагона 102 места, из них 60 сидячие и 42 стоячие,
+        // по жизненному опыту понимаю что всегда занимают сначала сидячие места, а потом стоячие
+        System.out.println("\nЗадача 6 \n");
+        int totalPlace = 102;
+        int sittingPlace = 60;
+        int standingPlace = 42;
+        if (totalPassengers <= 60) {
+            sittingPlace -= totalPassengers;
+            totalPlace -= totalPassengers;
+            System.out.println("Всего в вагоне свободно мест : " + totalPlace + " , из них " + sittingPlace + " сидячих, стоячих: " + standingPlace);
+        } else if (totalPassengers <= 102) {
+            sittingPlace = 0;
+            standingPlace = 102 - totalPassengers;
+            totalPlace -= totalPassengers;
+            System.out.println("Всего в вагоне свободно мест : " + totalPlace + " , из них " + sittingPlace + " сидячих, стоячих: " + standingPlace);
+        } else {
+            System.out.println("Вагон уже полностью забит.");
+        }
+    }
+
+    static void seventhTask() {
+        System.out.println("\nЗадача 7 \n");
+        int oneNum = 100;
+        int twoNum = 200;
+        int threeNum = 30;
+        if (oneNum > twoNum && oneNum > threeNum) {
+            System.out.println("Первое число больше других и равняется " + oneNum);
+        } else if (oneNum < twoNum && twoNum > threeNum) {
+            System.out.println("Второе число больше других и равняется " + twoNum);
+        } else {
+            System.out.println("Третье число больше других и равняется " + threeNum);
+        }
 
     }
 
