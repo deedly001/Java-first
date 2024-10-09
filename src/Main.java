@@ -1,123 +1,177 @@
 public class Main {
     public static void main(String[] args) {
         // задача 1.
-        firstTask(17);
+        /*У банка появилось мобильное приложение.
+        Поэтому теперь, когда пользователь заходит на сайт с телефона, ему предлагается скачать
+        приложение с учетом того, какая операционная система у пользователя.
+        Напишите программу, которая определяет, чем пользуется клиент (iOS или Android), и выдает соответствующее сообщение:
+        Для iOS — «Установите версию приложения для iOS по ссылке».
+        Для Android — «Установите версию приложения для Android по ссылке».
+        Объявите переменную clientOS, которая равна 0 или 1 (0 — iOS, 1 — Android).*/
+        firstTask();
+
         // задача 2.
-        secondTask(+5);
+        /*Усложним предыдущую задачу. Теперь нам нужно знать не только операционную систему телефона, но и год его создания.
+        Ваша задача — написать программу, которая выдает соответствующее сообщение клиенту при наличии двух условий.
+        Если год выпуска ранее 2015 года, то к сообщению об установке нужно добавить информацию об облегченной версии:
+            Для iOS оно будет звучать так: «Установите облегченную версию приложения для iOS по ссылке».
+            Для Android: «Установите облегченную версию приложения для Android по ссылке».
+            Для пользователей телефонов 2015 года выпуска и позже нужно вывести обычное предложение об установке приложения.
+            Для года создания телефона используйте переменную clientDeviceYear, в которой необходимо указать 2015 год.
+         */
+        secondTask();
+
         // задача 3.
-        thirdTask(60);
+
+        /* Напишите программу, которая определяет, является ли год високосным или нет.
+        Переменную года назовите year, в которую можно подставить значение интересующего нас года. Например, 2021.
+        Программа должна определять, високосный год или нет, и выводить соответствующее сообщение:
+        « …. год является високосным» или «... год не является високосным».
+        Небольшая справка: високосным является каждый четвертый год, но не является каждый сотый.
+        Также високосным является каждый четырехсотый год. Год должен быть больше, чем 1584 (в котором был введен високосный год).
+        */
+        thirdTask();
+
         // задача 4.
-        fourthTask(5);
+        /*В банке для клиентов организовывается доставка карт на дом. Чтобы известить клиента о том,
+        когда будет доставлена его карта, нужно знать расстояние от офиса до адреса доставки.
+        Правила доставки такие:
+            Доставка в пределах 20 км занимает сутки.
+            Доставка в пределах от 20 км до 60 км добавляет еще один день доставки.
+            Доставка в пределах 60 км до 100 км добавляет еще одни сутки.
+            Свыше 100 км доставки нет.
+        То есть с каждым следующим интервалом доставки срок увеличивается на 1 день.
+        Напишите программу, которая выдает сообщение в консоль: "Потребуется дней:" + срок доставки.
+        Объявите целочисленную переменную deliveryDistance = 95, которая содержит дистанцию до клиента.
+         */
+        fourthTask();
         // задача 5.
-        fifthTask(14);
-        // задача 6.
-        sixthTask(62);
-        // задача 7.
-        seventhTask();
-        // задача 8.
-
+        /* Напишите программу, которая определяет по номеру месяца в году, к какому сезону этот месяц принадлежит.
+        Например, 1-й месяц (он же январь) принадлежит к сезону зима.
+        Для написания программы используйте оператор switch. Для обозначения номера месяца используйте переменную monthNumber = 12.
+        Пропишите условие, при котором программа не будет выполняться (номер месяца больше 12).
+         */
+        fifthTask();
     }
 
-    static void firstTask(int userAge) {
+    static void firstTask() {
         System.out.println("Задача 1 \n");
-        if (userAge >= 18) {
-            System.out.println("Пользователю " + userAge + " лет, совершеннолетний");
+
+        byte clientOS = 1;
+
+//        switch (clientOS) {
+//            case 0:
+//                System.out.println("Установите версию приложения для iOS по ссылке.");
+//                break;
+//            case 1:
+//                System.out.println("Установите версию приложения для Android по ссылке.");
+//                break;
+//            default:
+//                System.out.println("Вы ввели что-то иное.");
+//                break;
+
+        if (clientOS == 0) {
+            System.out.println("Установите версию приложения для iOS по ссылке.");
+        } else if (clientOS == 1) {
+            System.out.println("Установите версию приложения для Android по ссылке.");
         } else {
-            System.out.println("Пользователю " + userAge + " лет, возраст совершеннолетия еще не наступил, нужно немного подождать");
+            System.out.println("Вы ввели что-то иное.");
         }
 
-//        String minorUser = "Пользователю " + userAge + " лет, совершеннолетний";
-//        String adultUser = "Пользователю " + userAge + " лет, возраст совершеннолетия еще не наступил, нужно немного подождать";
-//        String result  = (userAge >= 18) ? minorUser : adultUser;
-//        System.out.println(result);
-
-//        String result = (userAge >= 18) ? "Пользователю " + userAge + " лет, совершеннолетний" : "Пользователю " + userAge + " лет, возраст совершеннолетия еще не наступил, нужно немного подождать";
-//        System.out.println(result);
+//      if (clientOS == 1) {
+//          System.out.println("Установите версию приложения для Android по ссылке");
+//      } else {
+//          System.out.println("Установите версию приложения для iOS по ссылке");
+//      }
     }
 
-    static void secondTask(int streetTemp) {
+    static void secondTask() {
         System.out.println("\nЗадача 2 \n");
-        if (streetTemp >= 5) {
-            System.out.println("За окном +" + streetTemp + "°C , сегодня тепло, можно идти без шапки");
-        } else if (streetTemp <= -5) {
-            System.out.println("За окном " + streetTemp + "°C , на улице холодно, нужно надеть шапку");
+
+        byte clientOS = 0;
+        short clientDeviceYear = 2012;
+
+        if (clientOS == 0) {
+            if (clientDeviceYear < 2015) {
+                System.out.println("Установите облегченную версию приложения для iOS по ссылке");
+            } else {
+                System.out.println("Установите версию приложения для iOS по ссылке.");
+            }
+        } else if (clientOS == 1) {
+            if (clientDeviceYear < 2015) {
+                System.out.println("Установите облегченную версию приложения для Android по ссылке");
+            } else {
+                System.out.println("Установите версию приложения для Android по ссылке.");
+            }
         } else {
-            System.out.println("За окном немного прохладно"); // отсебятина, а то вывод неполноценным кажется
+            System.out.println("Вы ввели что-то иное.");
         }
+
     }
 
-    static void thirdTask(int userSpeed) {
+    static void thirdTask() {
         System.out.println("\nЗадача 3 \n");
-        if (userSpeed > 60) {
-            System.out.println("Ваша скорость " + userSpeed + " км/ч, придется заплатить штраф");
+
+        short year = 2360;
+
+        if (year % 4 == 0 && (year % 100 != 0 || year % 400 == 0)) {
+            System.out.println(year + " год является високосным");
         } else {
-            System.out.println("Ваша скорость " + userSpeed + " км/ч, можно ездить спокойно");
+            System.out.println(year + " год не является високосным");
         }
-//        String result = (userSpeed > 60) ? "Ваша скорость "+ userSpeed +" км/ч, придется заплатить штраф" : "Ваша скорость "+ userSpeed +" км/ч, можно ездить спокойно";
-//        System.out.println(result);
     }
 
-    static void fourthTask(int userAge) {
+    static void fourthTask() {
         System.out.println("\nЗадача 4 \n");
-        if (userAge >= 2 && userAge <= 6) {
-            System.out.println("Если возраст человека равен " + userAge + " лет, то ему нужно ходить в детский сад");
-        } else if (userAge >= 7 && userAge <= 17) {
-            System.out.println("Если возраст человека равен " + userAge + " лет, то ему нужно ходить в школу");
-        } else if (userAge >= 18 && userAge <= 24) {
-            System.out.println("Если возраст человека равен " + userAge + " лет, то ему нужно ходить в университет");
-        } else if (userAge > 24) {
-            System.out.println("Если возраст человека равен " + userAge + " лет, то ему нужно ходить в университет");
+
+        int deliveryDistance = 101;
+        byte daysForDelivery = 0;
+
+        if (deliveryDistance <= 100) {
+            if (deliveryDistance <= 20) {
+                daysForDelivery += 1;
+            } else if (deliveryDistance > 20 && deliveryDistance <= 60) {
+                daysForDelivery += 2;
+            } else if (deliveryDistance > 60) {
+                daysForDelivery += 3;
+            }
+            System.out.println("Потребуется дней: " + daysForDelivery);
+        } else {
+            System.out.println("Свыше 100 км доставки нет");
         }
     }
 
-
-    static void fifthTask(int userAge) {
+    static void fifthTask() {
         System.out.println("\nЗадача 5 \n");
-        if (userAge < 5) {
-            System.out.println("Если ребенку " + userAge + " лет, он не может кататься на аттракционе");
-        } else if (userAge < 14) { // (userAge >= 5 && userAge < 14) IDE говорит что бессмысленно писать так, тк оно и так проходит
-            System.out.println("Если ребенку " + userAge + " лет, он может кататься только в сопровождении взрослого. Если взрослого нет, то кататься нельзя.");
-        } else {//else if (userAge >= 14) тоже самое с IDE
-            System.out.println("Если ребенку " + userAge + " лет, он может кататься без сопровождения взрослого.");
+
+        byte monthNumber = 10;
+
+        switch (monthNumber) {
+            case 12:
+            case 1:
+            case 2:
+                System.out.println("Зима");
+                break;
+            case 3:
+            case 4:
+            case 5:
+                System.out.println("Весна");
+                break;
+            case 6:
+            case 7:
+            case 8:
+                System.out.println("Лето");
+                break;
+            case 9:
+            case 10:
+            case 11:
+                System.out.println("Осень");
+                break;
+            default:
+                System.out.println("номер месяца больше 12");
+                break;
         }
     }
-
-    static void sixthTask(int totalPassengers) {
-        // по этой задаче как я понял: вместимость вагона 102 места, из них 60 сидячие и 42 стоячие,
-        // по жизненному опыту понимаю что всегда занимают сначала сидячие места, а потом стоячие
-        System.out.println("\nЗадача 6 \n");
-        int totalPlace = 102;
-        int sittingPlace = 60;
-        int standingPlace = 42;
-        if (totalPassengers <= 60) {
-            sittingPlace -= totalPassengers;
-            totalPlace -= totalPassengers;
-            System.out.println("Всего в вагоне свободно мест : " + totalPlace + " , из них " + sittingPlace + " сидячих, стоячих: " + standingPlace);
-        } else if (totalPassengers <= 102) {
-            sittingPlace = 0;
-            standingPlace = 102 - totalPassengers;
-            totalPlace -= totalPassengers;
-            System.out.println("Всего в вагоне свободно мест : " + totalPlace + " , из них " + sittingPlace + " сидячих, стоячих: " + standingPlace);
-        } else {
-            System.out.println("Вагон уже полностью забит.");
-        }
-    }
-
-    static void seventhTask() {
-        System.out.println("\nЗадача 7 \n");
-        int oneNum = 100;
-        int twoNum = 200;
-        int threeNum = 30;
-        if (oneNum > twoNum && oneNum > threeNum) {
-            System.out.println("Первое число больше других и равняется " + oneNum);
-        } else if (oneNum < twoNum && twoNum > threeNum) {
-            System.out.println("Второе число больше других и равняется " + twoNum);
-        } else {
-            System.out.println("Третье число больше других и равняется " + threeNum);
-        }
-
-    }
-
 }
 
 
