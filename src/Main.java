@@ -99,7 +99,6 @@ public class Main {
             mySavings += 29000;
             System.out.println("Месяц " + i + ", сумма накоплений равна " + mySavings + " рублей");
         }
-
     }
 
     static void tenthTask() {
