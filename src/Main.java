@@ -55,9 +55,9 @@ public class Main {
 
         int citizens = 12_000_000;
         short currentsYear = 1;
-        int deathsPerYear = citizens * 8 / 1000;
-        int birthsPerYear = citizens * 17 / 1000;
         while (currentsYear <= 10) {
+            int deathsPerYear = citizens * 8 / 1000;
+            int birthsPerYear = citizens * 17 / 1000;
             citizens += birthsPerYear - deathsPerYear;
             System.out.println("Год " + currentsYear + ", численность населения составляет " + citizens + " чел.");
             currentsYear++;
@@ -87,14 +87,13 @@ public class Main {
 
         int deposit = 15000;
         short monthCounter = 0;
-        byte monthMult = 6;
+//        byte monthMult = 6;
 
         while (deposit <= 12_000_000) {
             monthCounter += 1;
             double percentPerMonth = deposit * 0.07;
             deposit += percentPerMonth;
-            if (monthCounter == monthMult) {
-                monthMult += 6;
+            if (monthCounter % 6 == 0) {
                 System.out.println("Месяц " + monthCounter + ", сумма накоплений равна " + deposit + " рублей, проценты составляют " + (Math.floor(percentPerMonth * 100) / 100) + " рублей");
             } else if (deposit >= 12_000_000) {
                 System.out.println("Месяц " + monthCounter + ", сумма накоплений равна " + deposit + " рублей, проценты составляют " + (Math.floor(percentPerMonth * 100) / 100) + " рублей");
@@ -109,14 +108,12 @@ public class Main {
         int deposit = 15000;
         byte depositPeriod = (9 * 12);
         short monthCounter = 0;
-        byte monthMult = 6;
 
         while (monthCounter <= depositPeriod) {
             monthCounter += 1;
             double percentPerMonth = deposit * 0.07;
             deposit += percentPerMonth;
-            if (monthCounter == monthMult) {
-                monthMult += 6;
+            if (monthCounter % 6 == 0) {
                 System.out.println("Месяц " + monthCounter + ", сумма накоплений равна " + deposit + " рублей");
             }
         }
