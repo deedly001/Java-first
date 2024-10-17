@@ -176,12 +176,10 @@ public class Main {
 
     static void ninthTask() {
         System.out.println("\nЗадача 9 \n");
-
     }
 
     static void tenthTask() {
         System.out.println("\nЗадача 10 \n");
-
     }
 }
 
