@@ -117,7 +117,15 @@ public class Main {
             firstArray[i] = i + 1;
         }
 
-        for (int i = 0; i < firstArray.length; i++) {
+//        int i = 0;
+//        while (i <= firstArray.length - 1) {
+//            if (i % 2 == 0) {
+//                firstArray[i] += 1;
+//            }
+//            i++;
+//        }
+
+        for (int i = 0; i <= firstArray.length - 1; i++) {
             if (i % 2 == 0) {
                 firstArray[i] += 1;
             }
