@@ -1,170 +1,109 @@
-import java.util.Arrays;
-
 public class Main {
-    public static void main(String[] args) {
 
-        firstTask();
-        secondTask();
-        thirdTask();
-        fourthTask();
-//        fifthTask();
-//        sixthTask();
-//        seventhTask();
-//        eighthTask();
-//        ninthTask();
-//        tenthTask();
+  public static void main(String[] args) {
+
+    firstTask();
+    secondTask();
+    thirdTask();
+    fourthTask();
+//    fifthTask();
+//    sixthTask();
+//    seventhTask();
+//    eighthTask();
+//    ninthTask();
+//    tenthTask();
+  }
+
+
+  static void firstTask() {
+    System.out.println("Задача 1 \n");
+
+    int weekExpenses = 0;
+    int[] cashArr = {3000, 5000, 7000, 4000, 4500};
+
+    for (int i = 0; i <= cashArr.length - 1; i++) {
+      weekExpenses += cashArr[i];
     }
+    System.out.println("Сумма трат за месяц составила: " + weekExpenses + " рублей");
+  }
 
+  static void secondTask() {
+    System.out.println("\nЗадача 2 \n");
 
-    static void firstTask() {
-        System.out.println("Задача 1 \n");
+    int[] cashArr = {9000, 5000, 2000, 4000, 4500};
+    int minExpenses = cashArr[0];
+    int maxExpenses = 0;
 
-        int[] firstArray = new int[3];
-//        firstArray[0] = 1;
-//        firstArray[1] = 2;
-//        firstArray[6] = 3;
-//        for (int i = 0; i < 3; i++) {
-//            firstArray[i] = i + 1;
-//        }
-
-        double[] secondArray = {1.57, 7.654, 9.986};
-        String[] userNames = {"Sergei", "Maxim", "Marina"};
-
-        System.out.println(Arrays.toString(firstArray));
-        System.out.println(Arrays.toString(secondArray));
-        System.out.println(Arrays.toString(userNames));
-
+    for (int i = 0; i <= cashArr.length - 1; i++) {
+      if (cashArr[i] >= maxExpenses) {
+        maxExpenses = cashArr[i];
+      }
+      if (cashArr[i] <= minExpenses) {
+        minExpenses = cashArr[i];
+      }
     }
+    System.out.println("Минимальная сумма трат за неделю составила " + minExpenses
+        + " рублей. Максимальная сумма трат за неделю составила " + maxExpenses + " рублей.");
+  }
 
-    static void secondTask() {
-        System.out.println("\nЗадача 2 \n");
+  static void thirdTask() {
+    System.out.println("\nЗадача 3 \n");
 
-        int[] firstArray = new int[3];
-        for (int i = 0; i < 3; i++) {
-            firstArray[i] = i + 1;
-        }
-        double[] secondArray = {1.57, 7.654, 9.986};
-        String[] userNames = {"Sergei", "Maxim", "Marina"};
+    int[] cashArr = {9000, 5000, 2000, 4000, 4500};
+    int averageCount = 0;
+    byte weekPerMonth = 4; // можно было записать просто числом
 
-        for (int i = 0; i < firstArray.length; i++) {
-            if (i >= firstArray.length - 1) {
-                System.out.println(firstArray[i]);
-            } else {
-                System.out.print(firstArray[i] + ", ");
-            }
-        }
-
-        for (int i = 0; i < secondArray.length; i++) {
-            if (i >= secondArray.length - 1) {
-                System.out.println(secondArray[i]);
-            } else {
-                System.out.print(secondArray[i] + ", ");
-            }
-        }
-
-        for (int i = 0; i < userNames.length; i++) {
-            if (i >= userNames.length - 1) {
-                System.out.println(userNames[i]);
-            } else {
-                System.out.print(userNames[i] + ", ");
-            }
-        }
+    for (int i = 0; i <= cashArr.length - 1; i++) {
+      averageCount += cashArr[i];
     }
+    System.out.println(
+        "Средняя сумма трат за месяц составила " + averageCount / weekPerMonth + " рублей.");
+  }
 
-    static void thirdTask() {
-        System.out.println("\nЗадача 3 \n");
+  static void fourthTask() {
+    System.out.println("\nЗадача 4 \n");
 
-        int[] firstArray = new int[3];
+    char[] reverseFullName = {'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
 
-        for (int i = 0; i < 3; i++) {
-            firstArray[i] = i + 1;
-        }
-
-        double[] secondArray = {1.57, 7.654, 9.986};
-        String[] userNames = {"Sergei", "Maxim", "Marina"};
-
-        for (int i = firstArray.length - 1; i >= 0; i--) {
-            if (i == 0) {
-                System.out.println(firstArray[i]);
-            } else {
-                System.out.print(firstArray[i] + ", ");
-            }
-        }
-
-        for (int i = secondArray.length - 1; i >= 0; i--) {
-            if (i == 0) {
-                System.out.println(secondArray[i]);
-            } else {
-                System.out.print(secondArray[i] + ", ");
-            }
-        }
-
-        for (int i = userNames.length - 1; i >= 0; i--) {
-            if (i == 0) {
-                System.out.println(userNames[i]);
-            } else {
-                System.out.print(userNames[i] + ", ");
-            }
-        }
+    for (int i = reverseFullName.length - 1; i >= 0; i--) {
+      System.out.print(reverseFullName[i]);
     }
+  }
 
-    static void fourthTask() {
-        System.out.println("\nЗадача 4 \n");
+  static void fifthTask() {
+    System.out.println("\nЗадача 5 \n");
 
-        int[] firstArray = new int[10];
+  }
 
-        for (int i = 0; i < firstArray.length; i++) {
-            firstArray[i] = i + 1;
-        }
-
-//        int i = 0;
-//        while (i <= firstArray.length - 1) {
-//            if (i % 2 == 0) {
-//                firstArray[i] += 1;
-//            }
-//            i++;
-//        }
-
-        for (int i = 0; i <= firstArray.length - 1; i++) {
-            if (i % 2 == 0) {
-                firstArray[i] += 1;
-            }
-        }
-        System.out.println(Arrays.toString(firstArray));
-    }
-
-    static void fifthTask() {
-        System.out.println("\nЗадача 5 \n");
-
-    }
-
-    static void sixthTask() {
-        System.out.println("\nЗадача 6 \n");
+  static void sixthTask() {
+    System.out.println("\nЗадача 6 \n");
 
 
-    }
+  }
 
-    static void seventhTask() {
-        System.out.println("\nЗадача 7 \n");
-
-
-    }
-
-    static void eighthTask() {
-        System.out.println("\nЗадача 8 \n");
+  static void seventhTask() {
+    System.out.println("\nЗадача 7 \n");
 
 
-    }
+  }
 
-    static void ninthTask() {
-        System.out.println("\nЗадача 9 \n");
+  static void eighthTask() {
+    System.out.println("\nЗадача 8 \n");
 
-    }
 
-    static void tenthTask() {
-        System.out.println("\nЗадача 10 \n");
-    }
+  }
+
+  static void ninthTask() {
+    System.out.println("\nЗадача 9 \n");
+
+  }
+
+  static void tenthTask() {
+    System.out.println("\nЗадача 10 \n");
+
+  }
 }
+
 
 
 
