@@ -5,7 +5,7 @@ public class Main {
     firstTask();
     secondTask();
     thirdTask();
-    fourthTask();
+//    fourthTask();
 //    fifthTask();
 //    sixthTask();
 //    seventhTask();
@@ -18,56 +18,39 @@ public class Main {
   static void firstTask() {
     System.out.println("Задача 1 \n");
 
-    int weekExpenses = 0;
-    int[] cashArr = {3000, 5000, 7000, 4000, 4500};
-
-    for (int i = 0; i <= cashArr.length - 1; i++) {
-      weekExpenses += cashArr[i];
-    }
-    System.out.println("Сумма трат за месяц составила: " + weekExpenses + " рублей");
+    String stName = "Ivan";
+    String middleName = "Ivanovich";
+    String lastName = "Ivanov";
+//    String fullName = stName + " " + middleName + " " + lastName;
+    String fullName = String.join(" ", stName, middleName, lastName);
+    System.out.println("Ф. И. О. сотрудника — " + fullName);
   }
 
   static void secondTask() {
     System.out.println("\nЗадача 2 \n");
 
-    int[] cashArr = {9000, 5000, 2000, 4000, 4500};
-    int minExpenses = cashArr[0];
-    int maxExpenses = 0;
+    String stName = "Ivan";
+    String middleName = "Ivanovich";
+    String lastName = "Ivanov";
+    String fullName = String.join(" ", stName, middleName, lastName).toUpperCase();
 
-    for (int i = 0; i <= cashArr.length - 1; i++) {
-      if (cashArr[i] >= maxExpenses) {
-        maxExpenses = cashArr[i];
-      }
-      if (cashArr[i] <= minExpenses) {
-        minExpenses = cashArr[i];
-      }
-    }
-    System.out.println("Минимальная сумма трат за неделю составила " + minExpenses
-        + " рублей. Максимальная сумма трат за неделю составила " + maxExpenses + " рублей.");
+    System.out.println("Ф. И. О. сотрудника — " + fullName);
   }
 
   static void thirdTask() {
     System.out.println("\nЗадача 3 \n");
 
-    int[] cashArr = {9000, 5000, 2000, 4000, 4500};
-    int averageCount = 0;
-    byte weekPerMonth = 4; // можно было записать просто числом
+    String stName = "Семён";
+    String middleName = "Семёнович";
+    String lastName = "Иванов";
+    String fullName = String.join(" ", stName, middleName, lastName);
 
-    for (int i = 0; i <= cashArr.length - 1; i++) {
-      averageCount += cashArr[i];
-    }
-    System.out.println(
-        "Средняя сумма трат за месяц составила " + averageCount / weekPerMonth + " рублей.");
+    System.out.println("Ф. И. О. сотрудника — " + fullName.replace("ё", "е").replace("Ё", "Е"));
   }
 
   static void fourthTask() {
     System.out.println("\nЗадача 4 \n");
 
-    char[] reverseFullName = {'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
-
-    for (int i = reverseFullName.length - 1; i >= 0; i--) {
-      System.out.print(reverseFullName[i]);
-    }
   }
 
   static void fifthTask() {
