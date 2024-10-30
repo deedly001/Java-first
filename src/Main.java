@@ -6,13 +6,11 @@ public class Main {
     System.out.println("Задание 1. \n");
     isLeapYear(2024);
     isLeapYear(2023);
-
     isDasher();
 
     System.out.println("Задание 2. \n");
     whichOS("Android", 2024);
     whichOS("IOS", 2014);
-
     isDasher();
 
     System.out.println("Задание 3. \n");
