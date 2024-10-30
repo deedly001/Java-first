@@ -4,23 +4,27 @@ public class Main {
     System.out.println("Задание 1. \n");
     isLeapYear(2024);
     isLeapYear(2023);
-    isDasher();
+    printDasher();
 
     System.out.println("Задание 2. \n");
     whichOS("Android", 2024);
     whichOS("iOS", 2014);
-    isDasher();
+    printDasher();
 
     System.out.println("Задание 3. \n");
     deliveryCard(110);
   }
 
-  public static void isDasher() {
+  public static void printDasher() {
     System.out.println("\n-----------------------------------\n");
   }
 
+  public static boolean isLeap(int year){
+    return (year % 4 == 0 && (year % 100 != 0 || year % 400 != 0));
+  }
+
   public static void isLeapYear(int year) {
-    if (year % 4 == 0 && (year % 100 != 0 || year % 400 != 0)) {
+    if (isLeap(year)) {
       System.out.println(year + " год — високосный год");
     } else {
       System.out.println(year + " год — не високосный год");
