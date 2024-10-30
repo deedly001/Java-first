@@ -1,91 +1,68 @@
+import java.util.Objects;
+
 public class Main {
 
   public static void main(String[] args) {
+    System.out.println("Задание 1. \n");
+    isLeapYear(2024);
+    isLeapYear(2023);
 
-    firstTask();
-    secondTask();
-    thirdTask();
-//    fourthTask();
-//    fifthTask();
-//    sixthTask();
-//    seventhTask();
-//    eighthTask();
-//    ninthTask();
-//    tenthTask();
+    isDasher();
+
+    System.out.println("Задание 2. \n");
+    whichOS("Android", 2024);
+    whichOS("IOS", 2014);
+
+    isDasher();
+
+    System.out.println("Задание 3. \n");
+    deliveryCard(110);
   }
 
-
-  static void firstTask() {
-    System.out.println("Задача 1 \n");
-
-    String stName = "Ivan";
-    String middleName = "Ivanovich";
-    String lastName = "Ivanov";
-//    String fullName = stName + " " + middleName + " " + lastName;
-    String fullName = String.join(" ", stName, middleName, lastName);
-    System.out.println("Ф. И. О. сотрудника — " + fullName);
+  public static void isDasher() {
+    System.out.println("\n-----------------------------------\n");
   }
 
-  static void secondTask() {
-    System.out.println("\nЗадача 2 \n");
-
-    String stName = "Ivan";
-    String middleName = "Ivanovich";
-    String lastName = "Ivanov";
-    String fullName = String.join(" ", stName, middleName, lastName).toUpperCase();
-
-    System.out.println("Ф. И. О. сотрудника — " + fullName);
+  public static void isLeapYear(int year) {
+    if (year % 4 == 0 && (year % 100 != 0 || year % 400 != 0)) {
+      System.out.println(year + " год — високосный год");
+    } else {
+      System.out.println(year + " год — не високосный год");
+    }
   }
 
-  static void thirdTask() {
-    System.out.println("\nЗадача 3 \n");
-
-    String stName = "Семён";
-    String middleName = "Семёнович";
-    String lastName = "Иванов";
-    String fullName = String.join(" ", stName, middleName, lastName);
-
-    System.out.println("Ф. И. О. сотрудника — " + fullName.replace("ё", "е").replace("Ё", "Е"));
+  public static void whichOS(String typeOS, int yearOfDevice) {
+    if (Objects.equals(typeOS, "Android") && (yearOfDevice < 2015)) {
+      System.out.println("Установите облегченную версию приложения для Android по ссылке");
+    } else if (Objects.equals(typeOS, "Android") && (yearOfDevice >= 2015)) {
+      System.out.println("Установите версию приложения для Android по ссылке");
+    } else if (Objects.equals(typeOS, "IOS") && (yearOfDevice < 2015)) {
+      System.out.println("Установите облегченную версию приложения для IOS по ссылке");
+    } else if (Objects.equals(typeOS, "IOS") && (yearOfDevice >= 2015)) {
+      System.out.println("Установите версию приложения для IOS по ссылке");
+    } else {
+      throw new RuntimeException("Вы ввели что-то другое, попробуйте снова");
+    }
   }
 
-  static void fourthTask() {
-    System.out.println("\nЗадача 4 \n");
+  public static void deliveryCard(int distanceToDelivery) {
+    byte daysForDelivery = 0;
 
-  }
-
-  static void fifthTask() {
-    System.out.println("\nЗадача 5 \n");
-
-  }
-
-  static void sixthTask() {
-    System.out.println("\nЗадача 6 \n");
-
-
-  }
-
-  static void seventhTask() {
-    System.out.println("\nЗадача 7 \n");
-
-
-  }
-
-  static void eighthTask() {
-    System.out.println("\nЗадача 8 \n");
-
-
-  }
-
-  static void ninthTask() {
-    System.out.println("\nЗадача 9 \n");
-
-  }
-
-  static void tenthTask() {
-    System.out.println("\nЗадача 10 \n");
-
+    if (distanceToDelivery <= 20) {
+      daysForDelivery += 1;
+      System.out.println("На доставку потребуется дней: " + daysForDelivery);
+    } else if (distanceToDelivery <= 60) {
+      daysForDelivery += 2;
+      System.out.println("На доставку потребуется дней: " + daysForDelivery);
+    } else if (distanceToDelivery <= 100) {
+      daysForDelivery += 3;
+      System.out.println("На доставку потребуется дней: " + daysForDelivery);
+    } else {
+      System.out.println("Свыше 100 км доставки нет");
+    }
   }
 }
+
 
 
 
