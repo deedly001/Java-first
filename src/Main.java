@@ -2,64 +2,77 @@ public class Main {
 
   public static void main(String[] args) {
     System.out.println("Задание 1. \n");
-    isLeapYear(2024);
-    isLeapYear(2023);
+    System.out.println(isLeapYear(2024));
+    System.out.println(isLeapYear(2023));
     printDasher();
 
     System.out.println("Задание 2. \n");
-    whichOS("Android", 2024);
-    whichOS("iOS", 2014);
+    System.out.println(updateAppMessage(1, 2024));
+    System.out.println(updateAppMessage(0, 2014));
+//    updateAppMessage(1, 2024);
+//    updateAppMessage(0, 2014);
     printDasher();
 
     System.out.println("Задание 3. \n");
-    deliveryCard(110);
+    System.out.println(deliveryCard(110));
+    System.out.println(deliveryCard(25));
+    System.out.println(deliveryCard(65));
+    System.out.println(deliveryCard(2));
   }
 
   public static void printDasher() {
     System.out.println("\n-----------------------------------\n");
   }
 
-  public static boolean isLeap(int year){
-    return (year % 4 == 0 && (year % 100 != 0 || year % 400 != 0));
-  }
+  public static String isLeapYear(int year) {
+    String message = "";
 
-  public static void isLeapYear(int year) {
-    if (isLeap(year)) {
-      System.out.println(year + " год — високосный год");
+    if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) {
+      message += year + " год — високосный год";
     } else {
-      System.out.println(year + " год — не високосный год");
+      message += year + " год — не високосный год";
     }
+    return message;
   }
 
-  public static void whichOS(String typeOS, int yearOfDevice) {
-    if (typeOS.equalsIgnoreCase("Android") && (yearOfDevice < 2015)) {
-      System.out.println("Установите облегченную версию приложения для Android по ссылке");
-    } else if (typeOS.equalsIgnoreCase("Android") && (yearOfDevice >= 2015)) {
-      System.out.println("Установите версию приложения для Android по ссылке");
-    } else if (typeOS.equalsIgnoreCase("IOS") && (yearOfDevice < 2015)) {
-      System.out.println("Установите облегченную версию приложения для IOS по ссылке");
-    } else if (typeOS.equalsIgnoreCase("IOS") && (yearOfDevice >= 2015)) {
-      System.out.println("Установите версию приложения для IOS по ссылке");
+  public static String updateAppMessage(int typeOS, int yearOfDevice) {
+    String message = "";
+
+    if (typeOS == 1) {
+      if (yearOfDevice < 2015) {
+        message += "Установите облегченную версию приложения для Android по ссылке";
+      } else {
+        message += "Установите версию приложения для Android по ссылке";
+      }
+    } else if (typeOS == 0) {
+      if (yearOfDevice < 2015) {
+        message += "Установите облегченную версию приложения для IOS по ссылке";
+      } else {
+        message += "Установите версию приложения для IOS по ссылке";
+      }
     } else {
-      throw new RuntimeException("Вы ввели что-то другое, попробуйте снова");
+      message += "вы ввели что-то другое";
     }
+    return message;
   }
 
-  public static void deliveryCard(int distanceToDelivery) {
+  public static String deliveryCard(int distanceToDelivery) {
     byte daysForDelivery = 0;
+    String message = "";
 
     if (distanceToDelivery <= 20) {
       daysForDelivery += 1;
-      System.out.println("На доставку потребуется дней: " + daysForDelivery);
+      message += "На доставку потребуется дней: " + daysForDelivery;
     } else if (distanceToDelivery <= 60) {
       daysForDelivery += 2;
-      System.out.println("На доставку потребуется дней: " + daysForDelivery);
+      message += "На доставку потребуется дней: " + daysForDelivery;
     } else if (distanceToDelivery <= 100) {
       daysForDelivery += 3;
-      System.out.println("На доставку потребуется дней: " + daysForDelivery);
+      message += "На доставку потребуется дней: " + daysForDelivery;
     } else {
-      System.out.println("Свыше 100 км доставки нет");
+      message += "Свыше 100 км доставки нет";
     }
+    return message;
   }
 }
 
