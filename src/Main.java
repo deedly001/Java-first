@@ -1,5 +1,3 @@
-import java.util.Objects;
-
 public class Main {
 
   public static void main(String[] args) {
@@ -30,18 +28,19 @@ public class Main {
   }
 
   public static void whichOS(String typeOS, int yearOfDevice) {
-    if (typeOS.equalsIgnoreCase( "Android") && (yearOfDevice < 2015)) {
+    if (typeOS.equalsIgnoreCase("Android") && (yearOfDevice < 2015)) {
       System.out.println("Установите облегченную версию приложения для Android по ссылке");
-    } else if (typeOS.equalsIgnoreCase( "Android") && (yearOfDevice >= 2015)) {
+    } else if (typeOS.equalsIgnoreCase("Android") && (yearOfDevice >= 2015)) {
       System.out.println("Установите версию приложения для Android по ссылке");
-    } else if (typeOS.equalsIgnoreCase( "IOS") && (yearOfDevice < 2015)) {
+    } else if (typeOS.equalsIgnoreCase("IOS") && (yearOfDevice < 2015)) {
       System.out.println("Установите облегченную версию приложения для IOS по ссылке");
-    } else if (typeOS.equalsIgnoreCase( "IOS") && (yearOfDevice >= 2015)) {
+    } else if (typeOS.equalsIgnoreCase("IOS") && (yearOfDevice >= 2015)) {
       System.out.println("Установите версию приложения для IOS по ссылке");
     } else {
       throw new RuntimeException("Вы ввели что-то другое, попробуйте снова");
     }
   }
+
 
   public static void deliveryCard(int distanceToDelivery) {
     byte daysForDelivery = 0;
