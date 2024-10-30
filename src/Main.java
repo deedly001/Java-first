@@ -41,7 +41,6 @@ public class Main {
     }
   }
 
-
   public static void deliveryCard(int distanceToDelivery) {
     byte daysForDelivery = 0;
 
@@ -59,3 +58,4 @@ public class Main {
     }
   }
 }
+
