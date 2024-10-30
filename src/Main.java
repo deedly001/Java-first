@@ -10,7 +10,7 @@ public class Main {
 
     System.out.println("Задание 2. \n");
     whichOS("Android", 2024);
-    whichOS("IOS", 2014);
+    whichOS("iOS", 2014);
     isDasher();
 
     System.out.println("Задание 3. \n");
@@ -30,13 +30,13 @@ public class Main {
   }
 
   public static void whichOS(String typeOS, int yearOfDevice) {
-    if (Objects.equals(typeOS, "Android") && (yearOfDevice < 2015)) {
+    if (typeOS.equalsIgnoreCase( "Android") && (yearOfDevice < 2015)) {
       System.out.println("Установите облегченную версию приложения для Android по ссылке");
-    } else if (Objects.equals(typeOS, "Android") && (yearOfDevice >= 2015)) {
+    } else if (typeOS.equalsIgnoreCase( "Android") && (yearOfDevice >= 2015)) {
       System.out.println("Установите версию приложения для Android по ссылке");
-    } else if (Objects.equals(typeOS, "IOS") && (yearOfDevice < 2015)) {
+    } else if (typeOS.equalsIgnoreCase( "IOS") && (yearOfDevice < 2015)) {
       System.out.println("Установите облегченную версию приложения для IOS по ссылке");
-    } else if (Objects.equals(typeOS, "IOS") && (yearOfDevice >= 2015)) {
+    } else if (typeOS.equalsIgnoreCase( "IOS") && (yearOfDevice >= 2015)) {
       System.out.println("Установите версию приложения для IOS по ссылке");
     } else {
       throw new RuntimeException("Вы ввели что-то другое, попробуйте снова");
