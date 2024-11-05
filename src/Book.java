@@ -14,9 +14,9 @@ public class Book {
     return this.bookName;
   }
 
-  public void setBookName(String name) {
-    this.bookName = name;
-  }
+//  public void setBookName(String name) {
+//    this.bookName = name;
+//  }
 
   public String getBookAuthor() {
     return bookAuthor.getAuthor();

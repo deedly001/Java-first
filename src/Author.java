@@ -12,17 +12,17 @@ public class Author {
     return String.join(" ", authorSurname, authorName);
   }
 
-  public String getAuthorName() {
-    return authorName;
-  }
-
-  public void setAuthorName(String name) {
-    this.authorName = name;
-  }
-
-  public void setAuthorSurname(String Surname) {
-    this.authorSurname = Surname;
-  }
+//  public String getAuthorName() {
+//    return authorName;
+//  }
+//
+//  public void setAuthorName(String name) {
+//    this.authorName = name;
+//  }
+//
+//  public void setAuthorSurname(String Surname) {
+//    this.authorSurname = Surname;
+//  }
 
 
 }
