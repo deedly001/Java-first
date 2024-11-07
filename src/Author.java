@@ -16,6 +16,27 @@ public class Author {
     return authorSurname;
   }
 
+  public String toString() {
+    return String.join(" ", this.getAuthorSurname(), this.getAuthorName());
+  }
+
+  public boolean isEquals(Author obj) {
+    if ((this.getAuthorName().equals(obj.getAuthorName())) && (this.getAuthorSurname()
+        .equals(obj.getAuthorSurname()))) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  public boolean isHashCode(Author obj) {
+    if (this.hashCode() == obj.hashCode()) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
 //  public void setAuthorName(String name) {
 //    this.authorName = name;
 //  }
