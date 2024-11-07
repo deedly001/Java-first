@@ -8,14 +8,14 @@ public class Author {
     this.authorName = authorName;
   }
 
-  public String getAuthor() {
-    return String.join(" ", authorSurname, authorName);
+  public String getAuthorName() {
+    return authorName;
   }
 
-//  public String getAuthorName() {
-//    return authorName;
-//  }
-//
+  public String getAuthorSurname() {
+    return authorSurname;
+  }
+
 //  public void setAuthorName(String name) {
 //    this.authorName = name;
 //  }
