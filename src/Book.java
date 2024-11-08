@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class Book {
 
   private String bookName;
@@ -14,11 +16,15 @@ public class Book {
 //    return this.
 //  }
 
+  @Override
   public String toString() {
-    String result = String.join(" ", this.bookName, this.bookAuthor.toString(),
-        String.valueOf(this.publishingYear));
-    return result;
+    return "Book{" +
+        "bookName='" + bookName + '\'' +
+        ", bookAuthor=" + this.bookAuthor.toString() +
+        ", publishingYear=" + publishingYear +
+        '}';
   }
+
 
 //  public String getBookAuthor() {
 //    return String.join(" ", bookAuthor.getAuthorSurname(), bookAuthor.getAuthorName());
@@ -37,21 +43,22 @@ public class Book {
     this.publishingYear = age;
   }
 
-  public boolean isEquals(Book obj) {
-    if ((this.getName().equals(obj.getName())) && (this.getPublishingYear()
-        .equals(obj.getPublishingYear()))) {
+  @Override
+  public boolean equals(Object obj) {
+    if (this == obj) {
       return true;
-    } else {
+    }
+    if (obj == null || getClass() != obj.getClass()) {
       return false;
     }
+    Book book = (Book) obj;
+    return publishingYear == book.publishingYear && Objects.equals(bookName, book.bookName)
+        && Objects.equals(bookAuthor, book.bookAuthor) && (this.hashCode() == obj.hashCode());
   }
 
-  public boolean isHashCode(Book obj) {
-    if (this.hashCode() == obj.hashCode()) {
-      return true;
-    } else {
-      return false;
-    }
+  @Override
+  public int hashCode() {
+    return Objects.hash(bookName, bookAuthor, publishingYear);
   }
 }
 
