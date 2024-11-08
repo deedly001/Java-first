@@ -14,29 +14,16 @@ public class App {
 
     System.out.println(
         "сравниваем книгу " + firstBook.getName() + " и книгу " + firstBook.getName() + " = "
-            + firstBook.isEquals(firstBook));
+            + firstBook.equals(firstBook));
     System.out.println(
         "сравниваем книгу " + firstBook.getName() + " и книгу " + secondBook.getName() + " = "
-            + firstBook.isEquals(secondBook));
+            + firstBook.equals(secondBook));
     System.out.println(
-        "сравниваем автора " + Sierra + " и автора " + Sierra + " = " + Sierra.isEquals(Sierra));
+        "сравниваем автора " + Sierra + " и автора " + Sierra + " = " + Sierra.equals(Sierra));
     System.out.println(
-        "сравниваем автора " + Sierra + " и автора " + Hortsmann + " = " + Sierra.isEquals(
+        "сравниваем автора " + Sierra + " и автора " + Hortsmann + " = " + Sierra.equals(
             Hortsmann));
 
-    System.out.println(
-        "сравниваем хэш книги " + firstBook.getName() + " и книги " + firstBook.getName() + " = " + firstBook.isHashCode(
-            firstBook));
-
-    System.out.println(
-        "сравниваем хэш книги " + firstBook.getName() + " и книги " + secondBook.getName() + " = " + firstBook.isHashCode(
-            secondBook));
-    System.out.println(
-        "сравниваем хэш автора " + Sierra + " и автора " + Sierra + " = " + Sierra.isHashCode(
-            Sierra));
-    System.out.println(
-        "сравниваем хэш автора " + Sierra + " и автора " + Hortsmann + " = " + Sierra.isHashCode(
-            Hortsmann));
 
 
   }

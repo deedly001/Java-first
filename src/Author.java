@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class Author {
 
   private String authorSurname;
@@ -16,28 +18,32 @@ public class Author {
     return authorSurname;
   }
 
+  @Override
   public String toString() {
-    return String.join(" ", this.getAuthorSurname(), this.getAuthorName());
+    return "Author{" +
+        "authorSurname='" + authorSurname + '\'' +
+        ", authorName='" + authorName + '\'' +
+        '}';
   }
 
-  public boolean isEquals(Author obj) {
-    if ((this.getAuthorName().equals(obj.getAuthorName())) && (this.getAuthorSurname()
-        .equals(obj.getAuthorSurname()))) {
+  @Override
+  public boolean equals(Object obj) {
+    if (this == obj) {
       return true;
-    } else {
+    }
+    if (!(obj instanceof Author author)) {
       return false;
     }
+    return Objects.equals(authorSurname, author.authorSurname) && Objects.equals(
+        authorName, author.authorName) && (this.hashCode() == obj.hashCode());
   }
 
-  public boolean isHashCode(Author obj) {
-    if (this.hashCode() == obj.hashCode()) {
-      return true;
-    } else {
-      return false;
-    }
+  @Override
+  public int hashCode() {
+    return Objects.hash(authorSurname, authorName);
   }
 
-//  public void setAuthorName(String name) {
+  //  public void setAuthorName(String name) {
 //    this.authorName = name;
 //  }
 //
